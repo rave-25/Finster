@@ -1,0 +1,352 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 100%;
+  vertical-align: top;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* General */
+
+.wrapInner {
+  position: relative;
+  width: 66.25em;
+  margin: 0 auto;
+  padding: 0 0.625em;
+  box-sizing: border-box;
+}
+
+.ofHide {
+  overflow: hidden;
+}
+
+*:focus {
+  outline: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+p,
+span {
+  color: #222222;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+.f-left-72 {
+  float: left;
+  width: 60%;
+}
+.f-right-30 {
+  float: right;
+  width: 40%;
+}
+/* General */
+
+/* header */
+
+.headerItems {
+  display: inline-flex;
+  margin: 1.7em 0;
+  gap: 42em;
+}
+
+.headerContent {
+  height: 5.25em;
+  border-bottom: 0.25em solid #d6cbc1;
+}
+
+.searchBar {
+  position: relative;
+}
+
+.searchArea {
+  margin: -0.5em 0 0 0;
+}
+
+.searchInput {
+  width: 13.66em;
+  height: 2.8em;
+  margin: 0 0 0 2.5em;
+  border: 0.125em solid #999999;
+  background-color: #ffffff;
+  font-size: 0.875em;
+  border-radius: 0.188em;
+}
+.logoContainer {
+  position: relative;
+}
+.logo {
+  position: absolute;
+  top: -0.5em;
+}
+.loginBtn {
+  width: 6.8em;
+  height: 3em;
+  margin: 0 0 0 0.7em;
+  border: none;
+  background-color: #000000;
+  color: #fff;
+  font-size: 0.875em;
+  font-size: 0.938em;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.loginBtn:hover {
+  opacity: 80%;
+}
+.section01 h1 {
+  padding: 35px 0;
+  font-size: 44px;
+  text-align: center;
+}
+
+.video-container {
+  position: sticky;
+  top: 8em;
+  bottom: 0;
+  width: 100%;
+  height: 25vh;
+  overflow: hidden;
+}
+.video-container video {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainHeading {
+  background-color: #fff;
+}
+
+.rateItems {
+  margin: 3em 0 0.438em 0;
+  text-align: center;
+}
+
+.blockRate {
+  display: flex;
+  margin: 0 auto;
+  gap: 1.875em;
+  flex-direction: column;
+  float: right;
+  align-items: center;
+}
+
+.blockRate li {
+  width: 18em;
+  padding: 1.69em 0;
+  border: 0.063em solid #bebebe;
+  border-radius: 0.625em;
+}
+.blockRate .win {
+  width: 22em;
+  padding: 0.69em 1em;
+  border: 0.063em solid #bebebe;
+  border-radius: 0.625em;
+}
+.option01 {
+  margin: 0.7em 0 0 0;
+  font-size: 1.5em;
+}
+
+.detail01 {
+  font-size: 0.875em;
+}
+
+.price01 {
+  margin: 0.438em 0 0 0;
+  color: #d0102c;
+  font-size: 3em;
+  font-weight: 700;
+}
+table {
+  border: 1px solid #bebebe;
+  width: 100%;
+  margin: 2em 0;
+  text-align: center;
+}
+table,
+tr,
+td {
+  padding: 1em;
+}
+.positions {
+  margin: 3em 0 0.438em 0;
+}
+.odd {
+  background-color: #f7efef;
+}
+.totalD {
+  margin: 0.438em 0 0 0;
+  color: #d0102c;
+  font-size: 3em;
+  font-weight: 700;
+}
+table,
+th {
+  padding: 1em 0;
+}
+
+.blockWin {
+  align-items: center;
+  margin: 0 auto;
+}
+.winH {
+  color: #139b35;
+}
+.loseH {
+  color: #d0102c;
+}
+.price02 {
+  margin: 0.438em 0 0 0;
+  color: #139b35;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.price03,
+.price04 {
+  margin: 0.438em 0 0 0;
+  color: #d0102c;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.longShort {
+  padding: 2em 3.4em;
+}
