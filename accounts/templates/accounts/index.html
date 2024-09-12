@@ -1,0 +1,256 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pyscript</title>
+
+    <link rel="stylesheet" href="{% static '/css/index.css' %}" />
+
+  </head>
+  <body>
+    <header>
+      <div class="headerContent">
+        <div class="wrapInner ofHide">
+          <div class="headerItems">
+            <div class="logoContainer">
+              <a href="/"
+                ><img
+                  class="logo"
+                  src="{% static 'images/logo.png' %}"
+                  alt="Algoforce logo"
+                  width="90"
+                  height="60"
+              /></a>
+            </div>
+            <div class="searchBar">
+              <form
+                action="/search"
+                method="get"
+                name="searchBtn"
+                class="searchArea"
+              >
+                <input
+                  class="searchInput"
+                  placeholder="Search"
+                  type="text"
+                  autocomplete="off"
+                />
+                <!-- <button class="searchBtn" ><img src="images/btn_search.png" alt="search" width="20" height="20"></button> -->
+                <a href="login/" target="_blank"
+                  ><button class="loginBtn btnHover">Search</button></a
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section01">
+        <div class="wrapInner ofHide">
+          <h1>Welcome to Algoforce</h1>
+        </div>
+        <div class="video-container">
+          <video autoplay muted loop>
+            <source src="{% static 'images/trade.mp4' %}" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="wrapInner">
+          <div class="positions ofHide f-left-72">
+            <h2>Highest Position</h2>
+            <table>
+              <tr>
+                <th id="">Symbol</th>
+                <th id="">Size</th>
+                <th id="">Notional Size</th>
+                <th id="">PNL</th>
+                <th id="">TP Price</th>
+                <th id="">SL Price</th>
+                <th id="">TP %</th>
+                <th id="">SL %</th>
+              </tr>
+              <tr class="odd">
+                <td id="">SAND</td>
+                <td id="">34</td>
+                <td id="">22000</td>
+                <td id="">1.04%</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+              </tr>
+              <tr>
+                <td id="">SAND</td>
+                <td id="">34</td>
+                <td id="">22000</td>
+                <td id="">1.04%</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+              </tr>
+              <tr class="odd">
+                <td id="">SAND</td>
+                <td id="">34</td>
+                <td id="">22000</td>
+                <td id="">1.04%</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+              </tr>
+            </table>
+
+            <h2>Near Closing Position</h2>
+
+            <table>
+              <tr>
+                <th id="">Symbol</th>
+                <th id="">Size</th>
+                <th id="">Notional Size</th>
+                <th id="">PNL</th>
+                <th id="">TP Price</th>
+                <th id="">SL Price</th>
+                <th id="">TP %</th>
+                <th id="">SL %</th>
+              </tr>
+              <tr class="odd">
+                <td id="">BTC</td>
+                <td id="">34</td>
+                <td id="">22000</td>
+                <td id="">1.04%</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+              </tr>
+              <tr>
+                <td id="">SAND</td>
+                <td id="">34</td>
+                <td id="">22000</td>
+                <td id="">1.04%</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+              </tr>
+              <tr class="odd">
+                <td id="">SAND</td>
+                <td id="">34</td>
+                <td id="">22000</td>
+                <td id="">1.04%</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+                <td id="">-</td>
+              </tr>
+            </table>
+            <div class="blockWin">
+              <ul>
+                <li class="rateItem win">
+                  <table>
+                    <h2 class="winH">WINNING</h2>
+                    <thead>
+                      <tr>
+                          <th>Symbol</th>
+                          <th>TP</th>
+                          <th>SL</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for item in win_ticker_data %}
+                              <td>{{ item }}</td>
+                      {% endfor %}
+                      {% for item in win_tp_data %}
+                              <td>{{ item }}</td>
+                      {% endfor %}
+                      {% for item in win_sl_data %}
+                              <td>{{ item }}</td>
+                      {% endfor %}
+                    </tbody>
+                </table>
+                  <table>
+                    <h2 class="loseH">LOSING</h2>
+                    <thead>
+                      <tr>
+                          <th>Symbol</th>
+                          <th>TP</th>
+                          <th>SL</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for item in lose_ticker_data %}
+                              <td>{{ item }}</td>
+                      {% endfor %}
+                      {% for item in lose_tp_data %}
+                              <td>{{ item }}</td>
+                      {% endfor %}
+                      {% for item in lose_sl_data %}
+                              <td>{{ item }}</td>
+                      {% endfor %}
+                    </tbody>
+                </table>
+                  <br />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="rateItems f-right-30">
+            <ul class="blockRate">
+              <li class="rateItem">
+                <p class="option01"><span>Invested Part</span><br /></p>
+                <p class="price01">4.8%</p>
+                <br />
+                <span class="detail01">Total of 1000 USDT</span>
+              </li>
+              <li class="rateItem">
+                <p class="option01"><span>Long and Short</span><br /></p>
+                <div class="longShort">
+                  <p class="price02">Long</p>
+                  <span class="price02" id="">50％ </span>
+                  <p class="price03">Short</p>
+                  <span class="price04" id="">50％</span>
+                </div>
+                <br />
+                <span class="detail01">Percent near winning ▲1.6％</span>
+              </li>
+               <li class="rateItem win">
+                <p class="option01"><span>Non Doubling Tickers</span><br /></p>
+                <p class="totalD">{{no_double}}</p>
+
+                <table>
+                  <h2 class="winH">Non Doubling</h2>
+                  <tr>
+                    <th id="">Symbol</th>
+                    <th id="">New size</th>
+                  </tr>
+                  <tbody>
+                      {% for item in non_double_ticker %}
+                              <td>{{ item }}</td>
+                      {% endfor %}
+                      {% for item in new_size %}
+                              <td>{{ item }}</td>
+                      {% endfor %}
+                  </tbody>
+                </table>
+                <br />
+                <span class="detail01">▲1.6％</span>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- <script>
+        document.getElementById("non-double").innerHTML = ();
+      </script> -->
+    </main>
+  </body>
+</html>
